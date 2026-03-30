@@ -10,5 +10,35 @@ namespace BankszamlaProjekt
 {
     internal class Account
     {
+        private string Szamlaszam;
+        private string Nev;
+        private decimal Kegyenleg;
+        private decimal Hitelkeret;
+
+        public Account(string szamlaszam, string nev, decimal KezdoEgyenleg, decimal hitelkeret)
+        {
+            this.Szamlaszam = szamlaszam;
+            this.Nev = nev;
+            this.Kegyenleg = KezdoEgyenleg;
+            this.Hitelkeret = hitelkeret;
+        }
+
+        public string GetSzamlaszam()
+        {
+            return Szamlaszam;
+        }
+        public string GetNev() 
+        {
+            return Nev;
+        }
+        public decimal GetKegyenleg()
+        {
+            return Kegyenleg;
+        }
+        public decimal GetHitelkeret()
+        {
+            return Hitelkeret;
+        }
+
     }
 }
