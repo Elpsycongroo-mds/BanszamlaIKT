@@ -11,7 +11,8 @@ namespace BankszamlaProjekt
     {
         static void Main(string[] args)
         {
-
+            DateTime most = DateTime.Now;
+            
             StreamReader sr = new StreamReader("szamlak.txt", Encoding.UTF8);            
             List<Account> adatok = new List<Account>();
             while (!sr.EndOfStream)
@@ -25,7 +26,7 @@ namespace BankszamlaProjekt
 
             do
             {
-                Console.Clear();
+                Console.Clear();                
                 Console.WriteLine("--- Banki lehetőségek ---");
                 Console.WriteLine("1. Befizetés");
                 Console.WriteLine("2. Kifizetés");
@@ -54,5 +55,12 @@ namespace BankszamlaProjekt
 
 
         }
+
+        static void Befizetes()
+        {
+            decimal osszeg = ;
+        }
+
+
     }      
 }
