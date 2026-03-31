@@ -5,3 +5,4 @@ J:\Tanév\2025-2026\C#\IKT projekt4\BankszamlaProjekt\bin\Debug\BankszamlaProjek
 J:\Tanév\2025-2026\C#\IKT projekt4\BankszamlaProjekt\bin\Debug\BankszamlaProjekt.pdb
 J:\Tanév\2025-2026\C#\IKT projekt4\BankszamlaProjekt\obj\Debug\BankszamlaProjekt.exe
 J:\Tanév\2025-2026\C#\IKT projekt4\BankszamlaProjekt\obj\Debug\BankszamlaProjekt.pdb
+J:\Tanév\2025-2026\C#\IKT projekt4\BankszamlaProjekt\obj\Debug\BankszamlaProjekt.exe.config

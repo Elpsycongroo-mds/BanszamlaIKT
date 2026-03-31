@@ -15,12 +15,12 @@ namespace BankszamlaProjekt
         private decimal Kegyenleg;
         private decimal Hitelkeret;
 
-        public Account(string szamlaszam, string nev, decimal KezdoEgyenleg, decimal hitelkeret)
+        public Account(string szamlaszam, string nev, decimal KezdoEgyenleg)
         {
             this.Szamlaszam = szamlaszam;
             this.Nev = nev;
             this.Kegyenleg = KezdoEgyenleg;
-            this.Hitelkeret = hitelkeret;
+            this.Hitelkeret = 0;
         }
 
         public string GetSzamlaszam()
