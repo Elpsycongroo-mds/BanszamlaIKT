@@ -21,7 +21,35 @@ namespace BankszamlaProjekt
             }
             sr.Close();
 
+            string menupont = "";
 
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("--- Banki lehetőségek ---");
+                Console.WriteLine("1. Befizetés");
+                Console.WriteLine("2. Kifizetés");
+                Console.WriteLine("3. Utalás");
+                Console.WriteLine("4. Adatok kiírása");
+                Console.WriteLine("5. Hitelkeret módosítása");
+                Console.WriteLine("6. Kilépés");
+
+                Console.Write("\nVálassz menüpontot: ");
+
+                menupont = Console.ReadLine();
+
+                switch (menupont)
+                {
+                    case "1":  break;
+                    case "2":  break;
+                    case "3": break;
+                    case "4": break;
+                    case "5": break;
+                    case "6": break;
+                    default: break;
+                }
+
+            } while (menupont != "6");
 
 
 
