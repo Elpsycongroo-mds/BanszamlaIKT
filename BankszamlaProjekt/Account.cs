@@ -60,5 +60,17 @@ namespace BankszamlaProjekt
     return false;
 }
 
+        public bool Utalas(decimal osszeg, Account celSzamla)
+{
+    if (osszeg > 0 && osszeg <= Egyenleg + Hitelkeret)
+    {
+        Egyenleg -= osszeg;
+        celSzamla.Befizetes(osszeg);
+        naplo.Add($"{DateTime.Now};Utalás küldése;{Egyenleg}");
+        return true;
+    }
+    return false;
+}
+
     }
 }
