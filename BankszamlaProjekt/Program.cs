@@ -104,6 +104,36 @@ static void Kifizetes(List<Account> adatok)
         Console.WriteLine("Nincs ilyen számla!");
     }
 }
+
+static void Utalas(List<Account> adatok)
+{
+    Console.Write("Melyik számláról utalunk (küldő): ");
+    Account kuldo = SzamlaKereses(adatok, Console.ReadLine());
+
+    Console.Write("Melyik számlára utalunk (fogadó): ");
+    Account fogado = SzamlaKereses(adatok, Console.ReadLine());
+
+    if (kuldo != null && fogado != null)
+    {
+        Console.Write("Utalás összege: ");
+        decimal osszeg = decimal.Parse(Console.ReadLine());
+
+        if (kuldo.Utalas(osszeg, fogado))
+        {
+            Console.WriteLine("Az utalás sikeresen megtörtént!");
+        }
+        else
+        {
+            Console.WriteLine("Sikertelen utalás! Nincs elég fedezet.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Hiba! Valamelyik számlaszám nem létezik.");
+    }
+}
+        
+        
         
 
     }      
