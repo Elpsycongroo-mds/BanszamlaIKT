@@ -133,7 +133,14 @@ static void Utalas(List<Account> adatok)
     }
 }
         
-        
+        static void Kiiras(List<Account> adatok)
+{
+    Console.WriteLine("--- Rendszerben lévő számlák ---");
+    foreach (Account acc in adatok)
+    {
+        Console.WriteLine(acc.ToString());
+    }
+}
         
 
     }      
