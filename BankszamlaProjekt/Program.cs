@@ -141,6 +141,32 @@ static void Utalas(List<Account> adatok)
         Console.WriteLine(acc.ToString());
     }
 }
+        static void HitelModositas(List<Account> adatok)
+{
+    Console.Write("Kérem a számlaszámot: ");
+    string szamSzam = Console.ReadLine();
+
+    Account acc = SzamlaKereses(adatok, szamSzam);
+
+    if (acc != null)
+    {
+        Console.Write("Kérem az új hitelkeret összegét: ");
+        decimal ujKeret = decimal.Parse(Console.ReadLine());
+
+        if (acc.HitelkeretModositas(ujKeret))
+        {
+            Console.WriteLine("Hitelkeret sikeresen módosítva!");
+        }
+        else
+        {
+            Console.WriteLine("Sikertelen módosítás! A keret túl nagy.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Nincs ilyen számla!");
+    }
+}
         
 
     }      
