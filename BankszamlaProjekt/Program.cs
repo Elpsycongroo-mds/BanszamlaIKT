@@ -56,10 +56,28 @@ namespace BankszamlaProjekt
 
         }
 
-        static void Befizetes()
-        {
-            decimal osszeg = ;
-        }
+        
+static void Befizetes(List<Account> adatok)
+{
+    Console.Write("Kérem a számlaszámot: ");
+    string szamSzam = Console.ReadLine();
+
+    Account acc = SzamlaKereses(adatok, szamSzam);
+
+    if (acc != null)
+    {
+        Console.Write("Kérem a befizetendő összeget: ");
+        decimal osszeg = decimal.Parse(Console.ReadLine());
+
+        acc.Befizetes(osszeg);
+        Console.WriteLine("A befizetés sikeres volt!");
+    }
+    else
+    {
+        Console.WriteLine("Nincs ilyen számla!");
+    }
+}
+
 
 
     }      
