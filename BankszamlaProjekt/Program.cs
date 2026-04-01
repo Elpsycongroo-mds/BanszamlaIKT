@@ -78,7 +78,33 @@ static void Befizetes(List<Account> adatok)
     }
 }
 
+static void Kifizetes(List<Account> adatok)
+{
+    Console.Write("Kérem a számlaszámot: ");
+    string szamSzam = Console.ReadLine();
 
+    Account acc = SzamlaKereses(adatok, szamSzam);
+
+    if (acc != null)
+    {
+        Console.Write("Kérem a kifizetendő összeget: ");
+        decimal osszeg = decimal.Parse(Console.ReadLine());
+
+        if (acc.Kifizetes(osszeg))
+        {
+            Console.WriteLine("A kifizetés sikeres volt!");
+        }
+        else
+        {
+            Console.WriteLine("Sikertelen kifizetés! Nincs elég fedezet.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Nincs ilyen számla!");
+    }
+}
+        
 
     }      
 }
