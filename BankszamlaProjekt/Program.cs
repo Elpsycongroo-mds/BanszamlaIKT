@@ -167,6 +167,15 @@ static void Utalas(List<Account> adatok)
         Console.WriteLine("Nincs ilyen számla!");
     }
 }
+
+        static void KilepesEsMentes(List<Account> adatok)
+{
+    foreach (Account acc in adatok)
+    {
+        acc.NaploMentes();
+    }
+    Console.WriteLine("Naplók sikeresen elmentve.");
+}
         
 
     }      
