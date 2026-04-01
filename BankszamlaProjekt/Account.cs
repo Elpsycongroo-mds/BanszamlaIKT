@@ -78,5 +78,18 @@ namespace BankszamlaProjekt
     return $"Számlaszám: {Szamlaszam} | Név: {Nev} | Egyenleg: {Egyenleg} Ft | Hitelkeret: {Hitelkeret} Ft";
 }
 
+        public bool HitelkeretModositas(decimal ujKeret)
+{
+    decimal maxKeret = Kegyenleg * 0.2m;
+
+    if (ujKeret <= maxKeret && ujKeret >= 0)
+    {
+        Hitelkeret = ujKeret;
+        naplo.Add($"{DateTime.Now};Hitelkeret módosítása;{Egyenleg}");
+        return true;
+    }
+    return false;
+}
+
     }
 }
