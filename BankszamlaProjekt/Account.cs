@@ -40,5 +40,14 @@ namespace BankszamlaProjekt
             return Hitelkeret;
         }
 
+        public void Befizetes(decimal osszeg)
+{
+    if (osszeg > 0)
+    {
+        Egyenleg += osszeg;
+        naplo.Add($"{DateTime.Now};Befizetés;{Egyenleg}");
+    }
+}
+
     }
 }
