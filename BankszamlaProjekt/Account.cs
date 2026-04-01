@@ -72,5 +72,11 @@ namespace BankszamlaProjekt
     return false;
 }
 
+
+        public override string ToString()
+{
+    return $"Számlaszám: {Szamlaszam} | Név: {Nev} | Egyenleg: {Egyenleg} Ft | Hitelkeret: {Hitelkeret} Ft";
+}
+
     }
 }
