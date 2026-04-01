@@ -91,5 +91,16 @@ namespace BankszamlaProjekt
     return false;
 }
 
+        public void NaploMentes()
+{
+    StreamWriter sw = new StreamWriter($"{Szamlaszam}.txt", false, Encoding.UTF8);
+    foreach (string sor in naplo)
+    {
+        sw.WriteLine(sor);
+    }
+    sw.Close();
+}
+
+        
     }
 }
